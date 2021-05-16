@@ -28,7 +28,8 @@ class _CountryPageState extends State<CountryPage> {
       appBar: new AppBar(
         title: new Text("Country Info"),
       ),
-      body:  ListView.builder(
+      body: countryData==null? Center(child: CircularProgressIndicator(),):
+       ListView.builder(
       itemCount: countryData.length==null? 0 :countryData.length,
       itemBuilder: (context,index){
       return Container(
