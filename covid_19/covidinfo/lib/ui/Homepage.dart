@@ -3,6 +3,7 @@
 import 'dart:convert';
 
 import 'package:covidinfo/component/ColorCompo.dart';
+import 'package:covidinfo/pages/CountryPage.dart';
 import 'package:covidinfo/pannel/InfoPannel.dart';
 import 'package:covidinfo/pannel/Mostaffectpannel.dart';
 //import 'package:covidinfo/model/model.dart';
@@ -67,7 +68,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   Padding(padding: EdgeInsets.only(left: 110.0),
                   child: FlatButton(onPressed: (){
-                    print("pressed");
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CountryPage()));
                   },
                   shape:  new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0),),
                    child: Text("Region", style: TextStyle(color: Colors.white,fontSize: 20.0),), color: Colors.black,),
