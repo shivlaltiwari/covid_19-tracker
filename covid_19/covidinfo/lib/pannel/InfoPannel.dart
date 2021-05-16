@@ -1,4 +1,5 @@
 import 'package:covidinfo/component/ColorCompo.dart';
+import 'package:covidinfo/pages/Faqs_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 class InfoPannel extends StatelessWidget {
@@ -7,22 +8,27 @@ class InfoPannel extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              color: primaryBlack,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("FAQS",style: TextStyle(color: Colors.white,fontSize: 25.0),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(Icons.arrow_forward, color: Colors.white,size: 25.0,),
-                  ),
-                ],
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> FaqsPage()));
+            },
+              child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: primaryBlack,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("FAQS",style: TextStyle(color: Colors.white,fontSize: 25.0),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.arrow_forward, color: Colors.white,size: 25.0,),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
